@@ -3,28 +3,83 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Hello AngularJS - Hello World</title>
-<link rel="stylesheet"
-	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-<script
-	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script
-	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>-->
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css">
+<link rel="stylesheet" href="https://material.angularjs.org/1.1.1/docs.css">
+
+<link rel="stylesheet" href="css/style2.css">
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+	<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
 </head>
-<body >
-	 
-	<p><a href="#/">Main</a></p>
 
-<a href="#about">Red</a>
-<a href="#about">Green</a>
-<a href="#/">Blue</a>
+<!-- ---------------------------------- <BODY> ------------------------ -->
+<body ng-controller="AppCtrl">
 
-<div ng-view></div>
+  <!--    <Top Header>    -->  
+       <md-toolbar layout="row">
+          <md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button menuBtn">
+            <md-icon aria-label="Menu" md-svg-icon="img/menu.svg">=</md-icon>
+          </md-button>
+          <h1 layout-align-gt-sm="center" class="md-toolbar-tools">Resume Info</h1>
+
+        </md-toolbar>
+<!--    </Top Header>  --> 
+
+ 
+<!--    <Nav>     -->
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-toolbar hide-gt-md layout="row">
+            <md-button ng-click="toggleSidenav('left')"  hide-gt-md class="md-icon-button menuBtn">
+              <md-icon aria-label="Menu" md-svg-icon="img/menu.svg">=</md-icon>
+            </md-button>
+        </md-toolbar>
+
+
+        
+          <md-list class="muppet-list">
+            <md-item ng-repeat="it in muppets">
+              <md-item-content>
+                <md-button ng-click="selectMuppet(it)" >
+                  <img ng-src="{{it.iconurl}}" class="face" alt=""> {{it.name}}
+                </md-button>
+
+              </md-item-content>
+            </md-item>
+          </md-list>
+        </md-sidenav>
+<!--    </Nav>     -->
+
+
+      <md-content layout="column" flex class="md-padding">
+<!--
+        <h2>{{selected.name}} </h2>
+        <p>{{selected.content}}</p>
+        <div class="cell">
+          <img ng-src="{{selected.imgurl}}" alt="{{selected.imgalt}}">
+        </div>-->
+        <div ng-view=""></div>
+
+
+      </md-content>
+
+
+
+	<!-- ---------------------------------- </BODY> ------------------------ -->
 	
+<!--  ------------------------ ALL JS IMPORTS -->	
 	<script src="js/app.js"></script>
 	<script src="js/controllers/homeController.js"></script>
 	<script src="js/controllers/aboutController.js"></script>
