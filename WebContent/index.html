@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/style2.css">
 
 
-
+ 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
@@ -23,11 +23,14 @@
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
 	<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+
+
+    
 </head>
 
 <!-- ---------------------------------- <BODY> ------------------------ -->
 <body ng-controller="AppCtrl">
-
+	 
   <!--    <Top Header>    -->  
        <md-toolbar layout="row">
           <md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button menuBtn">
@@ -45,6 +48,7 @@
             <md-button ng-click="toggleSidenav('left')"  hide-gt-md class="md-icon-button menuBtn">
               <md-icon aria-label="Menu" md-svg-icon="img/menu.svg">=</md-icon>
             </md-button>
+
         </md-toolbar>
 
 
@@ -59,6 +63,7 @@
               </md-item-content>
             </md-item>
           </md-list>
+          <md-checkbox ng-model="showDarkTheme">Use 'Dark' Themed Cards</md-checkbox>
         </md-sidenav>
 <!--    </Nav>     -->
 
@@ -83,5 +88,7 @@
 	<script src="js/app.js"></script>
 	<script src="js/controllers/homeController.js"></script>
 	<script src="js/controllers/aboutController.js"></script>
+
+
 </body>
 </html>	

@@ -1,11 +1,44 @@
 
-<div ng-controller="AppCtrl" ng-cloak="" class="carddemoBasicUsage" ng-app="MyApp">
   <md-content class="md-padding" layout-xs="column" layout="row">
     <div flex-xs="" flex-gt-xs="50" layout="column">
+
+        <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch="">
+          <md-card-header>
+            <md-card-avatar>
+              <img  style="border-radius: 50%"src="img/foto.jpg">
+            </md-card-avatar>
+
+            <md-card-header-text>
+              <span class="md-title">Gerson Lobos</span>
+              <span class="md-subhead">Developer</span>
+            </md-card-header-text>
+          </md-card-header>
+
+        <md-card-content>
+        <p class="Paragraph">
+        Specialized in Front and Backend technologies, with the use of JavaScript, Java, HTML, SQL and APIs. Loves the work in teams to bring new ideas to the table. Like working on scalable Apps Inside App Engine by managing running instances and app versioning. 
+      </p>
+        </md-card-content>
+
+      </md-card>
+
+
+
       <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch="">
+        <md-card-header>
+          <md-card-avatar>
+            <img  style="border-radius: 50%"src="img/angular.png">
+          </md-card-avatar>
+
+          <md-card-header-text>
+            <span class="md-title">Title</span>
+            <span class="md-subhead">Sub header</span>
+          </md-card-header-text>
+        </md-card-header>
+
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">Card with image</span>
+            <span class="md-headline">Card with image1</span>
 
             <span class="md-subhead">Large</span>
           </md-card-title-text>
@@ -13,15 +46,21 @@
             <div class="md-media-lg card-media"></div>
           </md-card-title-media>
         </md-card-title>
+        
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+
         <md-card-actions layout="row" layout-align="end center">
           <md-button>Action 1</md-button>
           <md-button>Action 2</md-button>
         </md-card-actions>
       </md-card>
+
+
+
       <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch="">
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">Card with image</span>
+            <span class="md-headline">Card with image2</span>
             <span class="md-subhead">Extra Large</span>
           </md-card-title-text>
         </md-card-title>
@@ -41,22 +80,36 @@
         </md-card-content>
       </md-card>
     </div>
+
+
+
     <div flex-xs="" flex-gt-xs="50" layout="column">
+
       <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch="">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Card with image</span>
-            <span class="md-subhead">Small</span>
-          </md-card-title-text>
-          <md-card-title-media>
-            <div class="md-media-sm card-media"></div>
-          </md-card-title-media>
-        </md-card-title>
+
+      <md-card-header>
+          
+          <md-card-header-text>
+            <span class="md-title">My Certifications</span>
+            <span class="md-subhead">GCP</span>
+          </md-card-header-text>
+        </md-card-header>
+        <img ng-src="img/Google-Cloud-Platform2.png" class="md-card-image" alt="Washed Out">
+
+
+
+     
+
         <md-card-actions layout="row" layout-align="end center">
-          <md-button>Action 1</md-button>
-          <md-button>Action 2</md-button>
+        <!--  <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button> -->
+
+              <md-button ng-click="showTabDialog($event)">
+      View
+    </md-button>
         </md-card-actions>
       </md-card>
+
       <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch="">
         <md-card-title>
           <md-card-title-text>
@@ -77,7 +130,7 @@
       </div>
     </div>
   </md-content>
-</div>
+
 
 
 
@@ -85,9 +138,9 @@
 <md-card>
   <md-card-header>
     <md-card-avatar>
-      <img class="md-user-avatar" style="transform: rotate(90deg) "src="img/gerson.jpg">
+      <img  style="border-radius: 50%"src="img/angular.png">
 
-      
+
     </md-card-avatar>
 
     <md-card-header-text>
@@ -95,6 +148,7 @@
       <span class="md-subhead">Sub header</span>
     </md-card-header-text>
   </md-card-header>
+
   <img ng-src="img/gerson.jpg" class="md-card-image" alt="image caption">
 
 
@@ -119,3 +173,113 @@
     </p>
   </md-card-content>
 </md-card>
+
+
+
+
+<!--  --------------------------------    TABS Content --> 
+<script type="text/ng-template" id="tabDialog.tmpl.html"><md-dialog aria-label="Mango (Fruit)">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Certifications</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content style="max-width:800px;max-height:810px; ">
+
+      <md-tabs md-dynamic-height md-border-bottom>
+
+        <md-tab label="App Engine">
+          <md-content class="md-padding">
+          
+          <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/GAE-certification.png">
+
+            <h1 class="md-display-2">Google App Engine</h1>
+            <p> (often referred to as GAE or simply App Engine) is a platform as a service (PaaS) cloud computing platform for developing and hosting web applications in Google-managed data centers. Applications are sandboxed and run across multiple servers. App Engine offers automatic scaling for web applications—as the number of requests increases for an application, App Engine automatically allocates more resources for the web application to handle the additional demand</p>
+
+             <div layout="row">
+              <md-button href="https://en.wikipedia.org/wiki/Google_App_Engine" target="_blank" >
+                    More on Wikipedia
+              </md-button>
+              <span flex></span>
+            </div>
+          </md-content>
+        </md-tab>
+
+        <md-tab label="Compute Engine">
+          <md-content class="md-padding">
+          <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/GCE-certification.png">
+            <h1 class="md-display-2">Google Compute Engine</h1>
+            <p>
+              Google Compute Engine (GCE) is the Infrastructure as a Service (IaaS) component of Google Cloud Platform which is built on the global infrastructure that runs Google’s search engine, Gmail, YouTube and other services. Google Compute Engine enables users to launch virtual machines (VMs) on demand. 
+            </p>
+
+            <div layout="row">
+              <md-button href="https://en.wikipedia.org/wiki/Google_Compute_Engine" target="_blank" >
+                    More on Wikipedia
+              </md-button>
+              <span flex></span>
+            </div>
+          </md-content>
+        </md-tab>
+
+        <md-tab label="Cloud SQL">
+          <md-content class="md-padding">
+          <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/GCloudSQL-certification.png">
+            <h1 class="md-display-2">Google Cloud SQL</h1>
+            <p>Google Cloud SQL is a fully-managed database service that makes it easy to set-up, maintain, manage and administer your relational MySQL databases in the cloud.</p>
+
+          <div layout="row">
+              <md-button href="https://cloud.google.com/sql/" target="_blank" >
+                    More on Cloud SQL
+              </md-button>
+              <span flex></span>
+            </div>
+          </md-content>
+        </md-tab>
+
+        <md-tab label="JavaScript">
+          <md-content class="md-padding">
+          <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/Certificate_javascript.jpg">
+            <h1 class="md-display-2">Javascript</h1>
+           
+          </md-content>
+        </md-tab>
+
+        <md-tab label="HTML">
+          <md-content class="md-padding">
+          <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/Certificate_css.jpg">
+            <h1 class="md-display-2">Html</h1>
+          </md-content>
+        </md-tab>
+
+        <md-tab label="CSS">
+          <md-content class="md-padding">
+          <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/Certificate_html.jpg">
+            <h1 class="md-display-2">CSS</h1>
+          </md-content>
+        </md-tab>
+          
+
+
+      </md-tabs>
+
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+
+      <span flex></span>
+                  <md-button ng-click="cancel()" style="margin-right:20px;" >
+                    Close
+                  </md-button>
+
+    </md-dialog-actions>
+
+  </form>
+</md-dialog>
+</script>
