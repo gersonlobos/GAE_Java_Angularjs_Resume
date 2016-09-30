@@ -72,6 +72,14 @@
 	     $location.path("/"+muppet.content);
 	    $scope.toggleSidenav('left');
 	  }
+
+	    $scope.toggleLeft = buildToggler('left');
+
+    function buildToggler(componentId) {
+      return function() {
+        $mdSidenav(componentId).toggle();
+      }
+    }
 	 
 	}]);
 	

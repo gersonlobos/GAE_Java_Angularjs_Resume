@@ -19,13 +19,23 @@ angular.module('ResumeApp')
     ];
 
     $scope.imagePath = 'img/washedout.png';
-    $scope.map = {
-                        center: {
-                                latitude: 56.162939,
-                                longitude: 10.203921
-                        },
-                        zoom: 8
-                };
+
+
+  $scope.showAdvanced = function(ev) {  // for custom dialog
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'dialog1.tmpl.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      $scope.status = 'You said the information was "' + answer + '".';
+    }, function() {
+      $scope.status = 'You cancelled the dialog.';
+    });
+  };
 
 
   $scope.showTabDialog = function(ev) {
@@ -56,7 +66,9 @@ angular.module('ResumeApp')
       $mdDialog.hide(answer);
     };
   }  
-  })
+
+
+  })// End Controller
   .config(function($mdThemingProvider) {
   $mdThemingProvider.theme('dark-grey').backgroundPalette('grey').dark();
   $mdThemingProvider.theme('dark-orange').backgroundPalette('orange').dark();

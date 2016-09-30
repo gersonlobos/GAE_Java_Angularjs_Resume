@@ -1,13 +1,12 @@
 
   <md-content class="md-padding" layout-xs="column" layout="row">
-    <div flex-xs="" flex-gt-xs="50" layout="column">
+    <div flex-xs="" flex-gt-xs="50" layout="column"> <!-- holder of column-->
 
-        <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch="">
+        <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch="">
           <md-card-header>
             <md-card-avatar>
-              <img  style="border-radius: 50%"src="img/Foto.jpg">   
+              <img  style="border-radius: 50%"src="https://storage.googleapis.com/cloud-storage-fotos/Foto.JPG">
             </md-card-avatar>
-<!--  checking -->
 
             <md-card-header-text>
               <span class="md-title">Gerson Lobos</span>
@@ -28,65 +27,37 @@
       <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch="">
         <md-card-header>
           <md-card-avatar>
-            <img  style="border-radius: 50%"src="img/angular.png">
+            <img  style="border-radius: 50%"src="img/icons/CloudPlatform.png">
           </md-card-avatar>
 
           <md-card-header-text>
-            <span class="md-title">Title</span>
-            <span class="md-subhead">Sub header</span>
+            <span class="md-title">Developer</span>
+            <span class="md-subhead">at White Stratus</span>
           </md-card-header-text>
         </md-card-header>
 
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Card with image1</span>
+        <div style="background-color:#505a64 " class="md-card-image" alt="Washed Out"> 
+         <img ng-src="img/Logo-White-Stratus.png"  style=" width:80%; margin: 10px 10px 10px 20px; ">
+       </div>
 
-            <span class="md-subhead">Large</span>
-          </md-card-title-text>
-          <md-card-title-media>
-            <div class="md-media-lg card-media"></div>
-          </md-card-title-media>
-        </md-card-title>
-        
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+
 
         <md-card-actions layout="row" layout-align="end center">
-          <md-button>Action 1</md-button>
-          <md-button>Action 2</md-button>
+          
+           <md-button ng-click="showAdvanced($event)">
+             View
+            </md-button>
         </md-card-actions>
       </md-card>
 
 
-
-      <md-card md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch="">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Card with image2</span>
-            <span class="md-subhead">Extra Large</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content layout="row" layout-align="space-between">
-          <div class="md-media-xl card-media"></div>
-
-          <md-card-actions layout="column">
-            <md-button class="md-icon-button" aria-label="Favorite">
-              
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Settings">
-           
-            </md-button>
-            <md-button class="md-icon-button" aria-label="Share">
-            </md-button>
-          </md-card-actions>
-        </md-card-content>
-      </md-card>
-    </div>
+    </div> <!--  ---- end holder of column ------ -->
 
 
 
-    <div flex-xs="" flex-gt-xs="50" layout="column">
+    <div flex-xs="" flex-gt-xs="50" layout="column"> <!-- ----  holder of column ---- -->
 
-      <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch="">
+      <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch="">
 
       <md-card-header>
           
@@ -111,7 +82,20 @@
         </md-card-actions>
       </md-card>
 
-      <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch="">
+
+      <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch="">
+
+              <md-card-header>
+          <md-card-avatar>
+            <img  style="border-radius: 50%"src="img/angular.png">
+          </md-card-avatar>
+
+          <md-card-header-text>
+            <span class="md-title">Title</span>
+            <span class="md-subhead">Sub header</span>
+          </md-card-header-text>
+        </md-card-header>
+
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">Card with image</span>
@@ -126,59 +110,21 @@
           <md-button>Action 2</md-button>
         </md-card-actions>
       </md-card>
+
       <div layout="" layout-padding="" layout-align="center end" style="height:200px">
-        <md-checkbox ng-model="showDarkTheme">Use 'Dark' Themed Cards</md-checkbox>
+        <md-checkbox ng-model="showDarkTheme">Show Themed Cards</md-checkbox>
       </div>
-    </div>
+
+    </div> <!-- ---- end holder of column ---- -->
   </md-content>
 
 
 
 
 
-<md-card>
-  <md-card-header>
-    <md-card-avatar>
-      <img  style="border-radius: 50%"src="img/angular.png">
 
 
-    </md-card-avatar>
-
-    <md-card-header-text>
-      <span class="md-title">Title</span>
-      <span class="md-subhead">Sub header</span>
-    </md-card-header-text>
-  </md-card-header>
-
-  <img ng-src="img/gerson.jpg" class="md-card-image" alt="image caption">
-
-
-  <md-card-title>
-    <md-card-title-text>
-      <span class="md-headline">Card headline</span>
-      <span class="md-subhead">Card subheader</span>
-    </md-card-title-text>
-  </md-card-title>
-  <md-card-actions layout="row" layout-align="start center">
-    <md-button>Action 1</md-button>
-    <md-button>Action 2</md-button>
-    <md-card-icon-actions>
-      <md-button class="md-icon-button" aria-label="icon">
-        <md-icon md-svg-icon="icon"></md-icon>
-      </md-button>
-    </md-card-icon-actions>
-  </md-card-actions>
-  <md-card-content>
-    <p>
-     Card content
-    </p>
-  </md-card-content>
-</md-card>
-
-
-
-
-<!--  --------------------------------    TABS Content --> 
+<!--  --------------------------------    TABS DIALOG Content --------------------------------  --> 
 <script type="text/ng-template" id="tabDialog.tmpl.html"><md-dialog aria-label="Mango (Fruit)">
   <form>
     <md-toolbar>
@@ -284,3 +230,75 @@
   </form>
 </md-dialog>
 </script>
+
+<!--  --------------------------------    CUSTOM DIALOG Content  --------------------------------  --> 
+
+<script type="text/ng-template" id="dialog1.tmpl.html"><md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Work Place</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" >
+        
+        <md-card class="md-whiteframe-8dp">
+          <md-card-content>
+         <div layout="row" class="PBold"> <p>White Stratus </p>  <span flex></span>   <p>June 2014 - Current</p> </div>
+            <p>Developer</p>
+            <ul>
+            <li>Offered App Support To clients around the world.</li>
+            <li>Built APIs to populate content in Websites.</li>
+            <li>Built Tools to manage Google Domains for clients.</li>
+            <li>Used Google Analytics to track user traffic in websites.</li>
+            <li>Used Google Big Query and Cloud Storage to track Backend Logs.</li>
+            <li>Used Google Compute Engine to Run Virtual machines that would ping websites to test traffic.</li>
+            </ul>
+        <md-card-content>
+        </md-card>
+
+        <md-card class="md-whiteframe-8dp">
+          <md-card-content>
+            <div layout="row" class="PBold"> <p>White Stratus </p>  <span flex></span>   <p>December 2013 - June 2014</p> </div>
+            <p>Junior Developers</p>
+            <ul>
+            <li>Built apps in Google Domains to Manage Drive Files and Calendar Events.</li>
+            </ul>
+        <md-card-content>
+        </md-card>
+
+        <md-card class="md-whiteframe-8dp">
+          <md-card-content>
+            <div layout="row" class="PBold"><p>White Stratus </p>  <span flex></span>   <p> September 2013 - December 2013</p></div>
+            <p>Junior Developers</p>
+            <ul>
+            <li>Built an Automated Testing tool using Java, Selenium, and Cucumber.</li>
+            </ul>
+          <md-card-content>
+        </md-card>
+
+      </div> <!--  End <div class="md-dialog-content" > -->
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      
+      <span flex></span>
+      
+      <md-button ng-click="cancel()">
+        Close
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
+</script>
+
+
+
+

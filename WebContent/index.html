@@ -1,8 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html ng-app="ResumeApp">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Hello AngularJS - Hello World</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- This line gets removed on compile  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<title>Resume</title>
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -25,7 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
 
 
-    
+
 </head>
 
 <!-- ---------------------------------- <BODY> ------------------------ -->
@@ -33,7 +36,7 @@
 	 
   <!--    <Top Header>    -->  
        <md-toolbar layout="row">
-          <md-button ng-click="toggleSidenav('left')" hide-gt-md class="md-icon-button menuBtn">
+          <md-button ng-click="toggleSidenav('left')" class="md-icon-button menuBtn">
             <md-icon aria-label="Menu" md-svg-icon="img/menu.svg">=</md-icon>
           </md-button>
           <h1 layout-align-gt-sm="center" class="md-toolbar-tools">Resume Info</h1>
@@ -42,17 +45,16 @@
 <!--    </Top Header>  --> 
 
  
-<!--    <Nav>     -->
-        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-        <md-toolbar hide-gt-md layout="row">
-            <md-button ng-click="toggleSidenav('left')"  hide-gt-md class="md-icon-button menuBtn">
-              <md-icon aria-label="Menu" md-svg-icon="img/menu.svg">=</md-icon>
-            </md-button>
 
+<!--    <Nav>     -->
+        <md-sidenav layout="column"  class="md-sidenav-left md-whiteframe-8dp" md-component-id="left" >
+
+               <md-toolbar layout="row">
+          <md-button ng-click="toggleSidenav('left')" class="md-icon-button menuBtn">
+            <md-icon aria-label="Menu" md-svg-icon="img/menu.svg"></md-icon>
+          </md-button>
         </md-toolbar>
 
-
-        
           <md-list class="muppet-list">
             <md-item ng-repeat="it in muppets">
               <md-item-content>
@@ -63,21 +65,12 @@
               </md-item-content>
             </md-item>
           </md-list>
-          <md-checkbox ng-model="showDarkTheme">Use 'Dark' Themed Cards</md-checkbox>
         </md-sidenav>
 <!--    </Nav>     -->
 
 
       <md-content layout="column" flex class="md-padding">
-<!--
-        <h2>{{selected.name}} </h2>
-        <p>{{selected.content}}</p>
-        <div class="cell">
-          <img ng-src="{{selected.imgurl}}" alt="{{selected.imgalt}}">
-        </div>-->
         <div ng-view=""></div>
-
-
       </md-content>
 
 
