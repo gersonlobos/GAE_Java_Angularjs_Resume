@@ -16,8 +16,8 @@
 	App.config(function($routeProvider) {
 	    $routeProvider
 	    .when("/", {
-	        templateUrl : "views/home.html",
-	        controller: "homeCtrl"
+	        templateUrl : "views/about.html",
+	        controller: "aboutCtrl"
 	    })
 	    .when("/home", {
 	        templateUrl : "views/home.html",
@@ -45,20 +45,21 @@
 	  $scope.muppets = allMuppets;
 	  $scope.selectMuppet = selectMuppet;
 	  $scope.muppets = [{
-	      name: 'Home',
-	      iconurl: 'https://lh3.googleusercontent.com/-KGsfSssKoEU/AAAAAAAAAAI/AAAAAAAAAC4/j_0iL_6y3dE/s96-c-k-no/photo.jpg',
+	      name: 'Schools',
+	      iconurl: 'img/wireTech.jpg',
 	      //iconurl: 'images/homeIcon.svg',
 	      imgurl: 'http://muppethub.com/wp-content/uploads/2014/02/Animal-7.png',
 	      content: 'home'
 	  },  {
-	      name: 'About',
-	      iconurl: 'https://lh3.googleusercontent.com/-KGsfSssKoEU/AAAAAAAAAAI/AAAAAAAAAC4/j_0iL_6y3dE/s96-c-k-no/photo.jpg',
+	      name: 'About Work',
+	      iconurl: 'img/wireTech.jpg',
 	      //iconurl: 'images/aboutIcon.png',
 	      imgurl: 'http://bakadesuyo.bakadesuyo.netdna-cdn.com/wp-content/uploads/2013/12/ways-to-increase-willpower.jpg',
 	      content: 'about'
 	  }];
 	  
-	  
+	  $scope.isOpen = false;
+      $scope.selectedMode = 'md-scale';
 
 	  $scope.toggleSidenav = function(menuId) {
 	    $mdSidenav(menuId).toggle();

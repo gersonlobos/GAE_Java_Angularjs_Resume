@@ -91,35 +91,33 @@
           </md-card-avatar>
 
           <md-card-header-text>
-            <span class="md-title">Title</span>
-            <span class="md-subhead">Sub header</span>
+            <span class="md-title">Projects</span>
+            <span class="md-subhead">Development</span>
           </md-card-header-text>
         </md-card-header>
 
         <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Card with image</span>
-            <span class="md-subhead">Medium</span>
-          </md-card-title-text>
-          <md-card-title-media>
-            <div class="md-media-md card-media"></div>
+         
+
+          <md-card-title-media>  
+            <div class="md-media-xl card-media"> <img src="img/projects.jpg"></div>
           </md-card-title-media>
         </md-card-title>
         <md-card-actions layout="row" layout-align="end center">
-          <md-button>Action 1</md-button>
-          <md-button>Action 2</md-button>
+          <md-button ng-click="showAdvanced2($event)">
+             View
+            </md-button>
         </md-card-actions>
       </md-card>
 
+<!--
       <div layout="" layout-padding="" layout-align="center end" style="height:200px">
         <md-checkbox ng-model="showDarkTheme">Show Themed Cards</md-checkbox>
-      </div>
+      </div>-->
 
     </div> <!-- ---- end holder of column ---- -->
+
   </md-content>
-
-
-
 
 
 
@@ -231,7 +229,7 @@
 </md-dialog>
 </script>
 
-<!--  --------------------------------    CUSTOM DIALOG Content  --------------------------------  --> 
+<!--  --------------------------------    CUSTOM DIALOG Content #1 --------------------------------  --> 
 
 <script type="text/ng-template" id="dialog1.tmpl.html"><md-dialog aria-label="Mango (Fruit)">
   <form ng-cloak>
@@ -294,6 +292,169 @@
       <md-button ng-click="cancel()">
         Close
       </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
+</script>
+
+
+<!--  --------------------------------    CUSTOM DIALOG Content #2 --------------------------------  --> 
+
+<script type="text/ng-template" id="dialog2.tmpl.html"><md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Dev Projects</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" >
+        
+        <md-card class="md-whiteframe-8dp">
+          <md-card-content>
+
+         <p><strong><span style="text-decoration: underline;">Work Projects &amp; Experience:</span></strong></p>
+
+            <div layout="row" class="PBold"> <p>White Stratus Support to Clients </p>  <span flex></span>   <p>September 2013 - Current</p> </div>
+              <ul>
+              <li>Offer support to clients around the word on problems on Apps or Sites that need updates or have deprecated code or APIs.</li>
+              </ul>
+              <p>&nbsp;</p>
+           <md-card-content>
+        </md-card>
+
+
+        <md-card class="md-whiteframe-8dp">
+          <md-card-content>
+              <div layout="row" class="PBold"> <p>Request Form for H&amp;M Global </p>  <span flex></span>   <p>Spring 2016</p> </div>
+
+            <ul>
+            <li>Created a Web Form for Admins to control and manage users and accounts with in stores around the world.</li>
+            </ul>
+            <p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </em></p>
+          <md-card-content>
+       </md-card>
+
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+            <div layout="row" class="PBold"> <p>Tool to check the host of the domain of an email Address. </p>  <span flex></span>   <p>Spring 2016</p> </div>
+
+            <ul>
+            <li>Script that would run behind a Google spreadsheet and detect emails and check if domain is Google hosted or not, by using and API to check MX records.</li>
+            <li>Used Google App Script, and open source APIs.</li>
+            </ul>
+        <md-card-content>
+      </md-card>
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+             <div layout="row" class="PBold"> <p>Mail Merge Demo App for selling  </p>  <span flex></span>   <p>Spring 2016</p> </div>
+            <ul>
+            <li>Built using new Google software App Maker and Material design.</li>
+            <li>Used Mail API to send emails based on templates.</li>
+            <li>Used Drive API to Import spreadsheets with lists of users to send emails to.</li>
+            </ul>
+        <md-card-content>
+      </md-card>
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+             <div layout="row" class="PBold"> <p>Drive List Project-Web Application </p>  <span flex></span>   <p>Summer 2015</p> </div>
+
+            <ul>
+            <li>Built an App to list files in users Drive based on folder ID.</li>
+            <li>Used Angular JS, Google APIs and App Engine.</li>
+            <li>URL: <a href="https://stratusphere-uat.appspot.com/ws-ui-app/index.html#/site/malaysia/drive">https://stratusphere-uat.appspot.com/ws-ui-app/index.html#/site/malaysia/drive</a></li>
+            </ul>
+        <md-card-content>
+      </md-card>
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+             <div layout="row" class="PBold"> <p>Google Glass, People, Drive and Sites Backend </p>  <span flex></span>   <p>Winter 2014</p> </div>
+
+            <ul>
+            <li>Used Google Java App Engine, Maven, Google API such as Drive and Admin SDK.</li>
+            <li>URL: <a href="https://stratusphere-uat.appspot.com/_ah/api/explorer">https://stratusphere-uat.appspot.com/_ah/api/explorer</a></li>
+            <li>Note: currently Locked test People Finder APi &gt; listPeoplebyQuery is unlocked.</li>
+            <li>Test angular site: <a href="https://skilled-conference-87619.appspot.com">https://skilled-conference-87619.appspot.com</a></li>
+            <li>Test Backend: <a href="https://skilled-conference-87619.appspot.com/_ah/api/explorer">https://skilled-conference-87619.appspot.com/_ah/api/explorer</a></li>
+            </ul>
+        <md-card-content>
+      </md-card>
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+             <div layout="row" class="PBold"> <p>Calendar Project-Web Application: </p>  <span flex></span>   <p>Summer 2014</p> </div>
+            <ul>
+            <li>Used Angular JS and Google Calendar API.</li>
+            <li>This App would display a calendar that was shared in a domain and allow users to see events and jump to video calls.</li>
+            <li>URL: <a href="https://stratusphere-uat.appspot.com/ws-ui-app/index.html#/site/malaysia/calendar">https://stratusphere-uat.appspot.com/ws-ui-app/index.html#/site/malaysia/calendar</a></li>
+            </ul>
+        <md-card-content>
+      </md-card>
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+             <div layout="row" class="PBold"> <p>Users&rsquo; Contacts Edit and Export to Sales Force </p>  <span flex></span>   <p>Winter 2013</p> </div>
+
+            <ul>
+            <li>Developed a tool that would get the contacts of Users in a Domain and Present the User with an editable Google spreadsheet with scripts in it that would edit or add contacts to the account.</li>
+            <li>On submit, a script would collect all spreadsheets and export to Sales Force.</li>
+            </ul>
+        <md-card-content>
+      </md-card>
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+             <div layout="row" class="PBold"> <p>Suspended User&rsquo;s Drive Transfer </p>  <span flex></span>   <p>Fall 2013</p> </div>
+
+            <ul>
+            <li>Developed a tool that would get suspended users in a Google Domain and transfer all files to a specified user, and maintaining the old shared preferences.</li>
+            <li>I developed this tool using App Script, Google Spreadsheets, Admin Services API and Google Drive API.&nbsp;&nbsp;</li>
+            </ul>
+        <md-card-content>
+      </md-card>
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+             <div layout="row" class="PBold"> <p>Automated Testing Software </p>  <span flex></span>   <p>September 2013</p> </div>
+
+            <ul>
+            <li>I built Testing Software using Eclipse IDE, Maven, Ant, Seleniun, Cucumber, JUnit and many other plugins.</li>
+            <li>This Software would easily create JUnit Tests with a series of English typed questions using Cucumber.</li>
+            <li>When software was ran, It would run series of test to a website and would create an html file with a user-friendly series of test results.</li>
+            </ul>
+        <md-card-content>
+      </md-card>
+
+      <md-card class="md-whiteframe-8dp">
+        <md-card-content>
+             <div layout="row" class="PBold"> <p>Ecommerce Website School Project </p>  <span flex></span>   <p>Spring 2013</p> </div>
+
+              <ul>
+              <li>Built a store site using PHP, SQL, Bootstrap, JQuery.</li>
+              <li>The site will display available items that were added by an admin.</li>
+              </ul>
+        <md-card-content>
+      </md-card>
+
+
+
+      </div> <!--  End <div class="md-dialog-content" > -->
+
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      
+      <span flex></span>
+      <md-button ng-click="cancel()">Close</md-button>
     </md-dialog-actions>
   </form>
 </md-dialog>

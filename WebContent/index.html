@@ -26,16 +26,23 @@
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
 	<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script> 
+<!--  ------------------------ ALL JS IMPORTS --> 
+  <script src="js/app.js"></script>
+  <script src="js/controllers/homeController.js"></script>
+  <script src="js/controllers/aboutController.js"></script>
 
 
 </head>
 
 <!-- ---------------------------------- <BODY> ------------------------ -->
 <body ng-controller="AppCtrl">
+
+  <!--  great example of side nav here 
+  http://blog.sodhanalibrary.com/2015/07/side-navigation-panel-design-using.html#.V_CXBpMrLcJ -->
 	 
   <!--    <Top Header>    -->  
-       <md-toolbar layout="row">
+       <md-toolbar layout="row" class="navfixedPos">
           <md-button ng-click="toggleSidenav('left')" class="md-icon-button menuBtn">
             <md-icon aria-label="Menu" md-svg-icon="img/menu.svg">=</md-icon>
           </md-button>
@@ -55,6 +62,7 @@
           </md-button>
         </md-toolbar>
 
+<md-divider></md-divider>
           <md-list class="muppet-list">
             <md-item ng-repeat="it in muppets">
               <md-item-content>
@@ -65,22 +73,52 @@
               </md-item-content>
             </md-item>
           </md-list>
+
+
         </md-sidenav>
 <!--    </Nav>     -->
 
 
       <md-content layout="column" flex class="md-padding">
+      <br><br>
         <div ng-view=""></div>
-      </md-content>
+        <br><br><br>
+
+                   <div layout="column" ng-cloak="" class="fabSpeedDialdemoBasicUsage relative" >
+
+              <md-fab-speed-dial md-open="isOpen" md-direction="left"
+                                 ng-class="selectedMode">
+                <md-fab-trigger >
+                  <md-button aria-label="menu" class="md-fab">
+                    <md-icon md-svg-src="img/menu.svg"></md-icon>
+                  </md-button>
+                </md-fab-trigger>
+
+                <md-fab-actions>
+                  <md-button onclick="window.open('https://github.com/gersonlobos','_blank')" aria-label="Github" class="md-fab md-raised md-mini smallcol">
+                  <ng-md-icon icon="github-circle" style="fill: pink"></ng-md-icon> 
+                  </md-button>
+                  <md-button onclick="window.open('https://www.linkedin.com/in/gerson-lobos-92759084','_blank')" aria-label="linkein" class="md-fab md-raised md-mini smallcol">
+                    <ng-md-icon icon="linkedin" style="fill: pink"></ng-md-icon> 
+                  </md-button>
+                  <md-button onclick="location.href='mailto:gerson.lobos@gmail.com'" aria-label="Google" class="md-fab md-raised md-mini smallcol">
+                    <ng-md-icon icon="send" style="fill: pink"></ng-md-icon> 
+                  </md-button>
+                </md-fab-actions>
+              </md-fab-speed-dial>
+            </div>
 
 
+
+
+      </md-content><!--    content on right column-->
+
+
+ 
 
 	<!-- ---------------------------------- </BODY> ------------------------ -->
 	
-<!--  ------------------------ ALL JS IMPORTS -->	
-	<script src="js/app.js"></script>
-	<script src="js/controllers/homeController.js"></script>
-	<script src="js/controllers/aboutController.js"></script>
+
 
 
 </body>

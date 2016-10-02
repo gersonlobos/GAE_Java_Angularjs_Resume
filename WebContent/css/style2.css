@@ -4,7 +4,10 @@ md-sidenav {
   fill: #737373;
   height: 100%;
 }
-
+.navfixedPos{
+	position: fixed;
+	top:0;
+}
 .md-button.md-icon-button.menuBtn {
   margin-top: 6px;
   margin-right: 0;
@@ -61,7 +64,54 @@ md-sidenav {
 	font-size: 18px;
 }
 
+.left{
+	align: left;
+}
+.right{
+	align: right;
+}
 
+
+/*        Icon Info Bottom Right      */
+.fabSpeedDialdemoBasicUsage .text-capitalize {
+  text-transform: capitalize; }
+
+.fabSpeedDialdemoBasicUsage .md-fab:hover, .fabSpeedDialdemoBasicUsage .md-fab.md-focused {
+  background-color: rgb(255,64,129) !important;
+
+   }
+
+.fabSpeedDialdemoBasicUsage p.note {
+  font-size: 1.8rem; }
+
+.fabSpeedDialdemoBasicUsage .lock-size {
+  min-width: 100px;
+  min-height: 100px;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto; 
+
+}
+.md-button.md-fab, .md-button.md-fab {
+    background-color: rgb(255,64,129);
+    color: rgb(255,255,255);
+}
+
+.md-button.md-fab.smallcol, .md-button.md-fab.smallcol {
+    background-color: white;
+    color: rgb(255,255,255);
+    height: 80%;
+    width: 80%
+}
+
+.relative {
+	position: fixed;
+    bottom: 20px;
+    right: 30px;
+
+    
+}
 
 
 
