@@ -15,10 +15,6 @@
 	
 	App.config(function($routeProvider) {
 	    $routeProvider
-	    .when("/", {
-	        templateUrl : "views/about.html",
-	        controller: "aboutCtrl"
-	    })
 	    .when("/home", {
 	        templateUrl : "views/home.html",
 	        controller: "homeCtrl"

@@ -25,7 +25,8 @@ angular.module('ResumeApp')
 
 .controller('homeCtrl', function($scope, $mdDialog) {
   
-
+	  ga('create', 'UA-86552039-1', 'auto');
+	  ga('send', 'pageview');
 
 
 

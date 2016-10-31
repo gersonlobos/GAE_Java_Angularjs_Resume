@@ -11,6 +11,10 @@
 
 angular.module('ResumeApp')
   .controller('aboutCtrl', function ($scope, $mdDialog) {
+	  
+	  ga('create', 'UA-86552039-1', 'auto');
+	  ga('send', 'pageview');
+	  
     $scope.awesomeThings = [
       'gerson',
       'enrique',
